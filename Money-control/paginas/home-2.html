@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money-control home</title>
+    <link rel=stylesheet href="../assets/styles/home-2.css">
+</head>
+<body>
+    <!---inicio del nav bar-->
+    <nav class="nav">
+
+        <div class="nav-bar">
+
+
+            <div class="logo">
+                <a class="link-h" href="#">
+                    <img class="img-logo" src="../assets/png/Money-control.png">
+                </a>
+            </div>
+        <div class="l-links">
+
+            <ul class="ur-nav">
+                <li >
+                    <a class="link link-p" href="#">
+                        <img class="icon" src="../assets/vectores/premium.svg">
+                        Premium
+                    </a>
+                </li>
+                <li class="sep">
+                    |
+                </li>
+                <li>
+                    <button class="nav-button" onclick="open_close_notifications()">
+                        <img class="icon" src="../assets/vectores/notiications.svg">
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-button" onclick= "open_close_accout()">
+                        <img class="icon" src="../assets/vectores/profile.svg" >
+                    </button>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class ="scr-cel-bar">
+            <button id="hamburguesa" class="hamburguesa" onclick="open_close_burger()">
+                <div class="linea">
+                </div>
+    
+                <div class="linea">
+                </div>
+                <div class="linea">
+                </div>
+            </button>
+        </div>
+
+        
+        </div>
+        <!--fin del navbar principal-->
+
+        <!--aca inica el diseño del contenido del menu hamburguesa-->
+        <div class="me">
+            <ul class="menu-hamburguesa" id="menu-h">
+                <li>
+                    <a class="link link-d" name="link_animate" href="#">Link-1</a>
+                </li>
+                <li>
+                    <a  class="link link-d" name="link_animate" href="#">Link-2</a>
+                </li>
+                <li>
+                    <a class="link link-d" id="link_animate" href="#">Link-3</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="div-notifications" id="notifications">
+
+        </div>
+
+        <div class="div-accout" id="accout">
+
+        </div>
+    
+    </nav> 
+
+
+    <nav class="nav-lateral">
+        <ul class="ul-nav-lateral">
+            <li class="lateral-element">
+                <button class="lateral-button">
+                    <img class="icon icon-lateral" src="../assets/vectores/premium.svg">
+                </button>
+            </li>
+            <li class="lateral-element">
+                <button class="lateral-button">
+                    <img class="icon icon-lateral" src="../assets/vectores/premium.svg">
+                </button>
+            </li>
+            <li class="lateral-element">
+                <button class="lateral-button">
+                    <img class="icon icon-lateral" src="../assets/vectores/premium.svg">
+                </button>
+            </li class="lateral-element">
+            <li class="lateral-element">
+                <button class="lateral-button">
+                    <img class="icon icon-lateral" src="../assets/vectores/premium.svg">
+                </button>
+            </li>
+            <li class="lateral-element">
+                <button class="lateral-button">
+                    <img class="icon icon-lateral" src="../assets/vectores/premium.svg">
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <script>
+          document.addEventListener('click', function(event) {
+            console.log('Se hizo clic en el html');
+                });
+
+        function open_close_burger () {
+            let menu = document.getElementById("menu-h");
+            let hamburguesa = document.getElementById("hamburguesa");
+            menu.classList.toggle("active-menu-h");
+            hamburguesa.classList.toggle("active-h");
+            if (!menu.contains(event.target)) {
+                menu.classList.remove("active-menu-h");
+                }
+
+        }
+        function open_close_notifications(){
+            let notifications = document.getElementById("notifications");
+            notifications.classList.toggle("active-notifications");
+            /*if (!notifications.contains(event.target)) {
+                notifications.classList.remove("active-notifications");
+                }
+*/     
+        }
+        function open_close_accout(){
+            let accout = document.getElementById("accout");
+            accout.classList.toggle("active-accout");
+        }
+    </script>
+    
+</body>
+</html>
