@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money-control home</title>
+    <link rel=stylesheet href="m-ham.css">
+</head>
+<body>
+    <!---inicio del nav bar-->
+    <nav class="nav">
+
+        <div class="nav-bar">
+
+
+            <div class="logo">
+                <a class="link-h" href="#">
+                    <img class="img-logo" src="../Money-control/assets/png/Money-control.png">
+                </a>
+            </div>
+        <div class="l-links">
+
+            <ul class="ur-nav">
+                <li >
+                    <a class="link link-p" href="#">
+                        <img class="icon" src="../Money-control/assets/vectores/premium.svg">
+                        Premium
+                    </a>
+                </li>
+                <li class="sep">
+                    |
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="icon" src="../Money-control/assets/vectores/notiications.svg">
+                    </a>
+                </li>
+                <li>
+                    <a  href="#">
+                        <img class="icon" src="../Money-control/assets/vectores/profile.svg" >
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class ="scr-cel-bar">
+            <button id="hamburguesa" class="hamburguesa" onclick="open_close_burger()">
+                <div class="linea">
+                </div>
+    
+                <div class="linea">
+                </div>
+                <div class="linea">
+                </div>
+            </button>
+        </div>
+
+        
+        </div>
+        <!--fin del navbar principal-->
+
+        <!--aca inica el diseño del contenido del menu hamburguesa-->
+        <div class="me">
+            <ul class="menu-hamburguesa" id="menu-h">
+                <li>
+                    <a class="link link-d" name="link_animate" href="#">Link-1</a>
+                </li>
+                <li>
+                    <a  class="link link-d" name="link_animate" href="#">Link-2</a>
+                </li>
+                <li>
+                    <a class="link link-d" id="link_animate" href="#">Link-3</a>
+                </li>
+            </ul>
+        </div>
+    
+    </nav> 
+    <script>
+        function open_close_burger () {
+            let menu = document.getElementById("menu-h");
+            let hamburguesa = document.getElementById("hamburguesa");
+            menu.classList.toggle("active-menu-h");
+            hamburguesa.classList.toggle("active-h");
+
+        }
+    </script>
+</body>
+</html>

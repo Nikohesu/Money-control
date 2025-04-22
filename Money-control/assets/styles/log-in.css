@@ -1,0 +1,63 @@
+
+@font-face {
+    font-family:SourGummy-Light ;
+    src: url(../fonts/SourGummy-Light.ttf);
+}
+@font-face {
+    font-family: League-spartan;
+    src: url(../fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+body{
+    background-color: #E0FFC3
+}
+.campo {
+    display: block;
+    min-width: 300px;
+    max-width: 500px;
+    width: 50vw;
+    height: 20px;
+}
+.form-Label{
+    display: block;
+
+}
+.form {
+     
+
+}
+.hola {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.form-label{
+    font-family:SourGummy-Light ;
+    font-size: 30px;
+    
+}
+
+.boton {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:white;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family:SourGummy-Light ;
+    padding: 10px;
+
+}
+.parrafo{
+    font-family: League-spartan;
+    font-size: 40px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.img {
+    
+}

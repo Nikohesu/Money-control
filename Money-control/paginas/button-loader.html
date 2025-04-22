@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/button-loader.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .div{
+            width:1000px;
+            height:500px;
+            background-color: white;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+}
+
+        
+
+    </style>
+    <div class="div">
+        <button id ="boton" class="boton" onclick="transform_loader()">
+            <p id = "boton-text" class="boton-text">Iniciar Sesion</p>
+        </button>
+        <div class="loader">
+
+        </div>
+
+        <script>
+            function transform_loader() {
+                let element = document.getElementById("boton");
+                let text = document.getElementById("boton-text");
+
+                element.classList.add("loader");
+                text.classList.add("boton-text-a");
+            }
+        </script>
+  
+</body>
+</html>

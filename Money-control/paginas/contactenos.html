@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="../assets/styles/contactenos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body>
+    <!--AQUI VA LA NAVBAR-->
+    <nav class="nav">
+
+      <div class="nav-bar">
+
+
+          <div class="logo">
+              <a class="link-h" href="#">
+                  <img class="img-logo" src="../assets/png/Money-control.png">
+              </a>
+          </div>
+      <div class="l-links">
+
+          <ul class="ur-nav">
+              <li >
+                  <a class="link link-p" href="#">
+                      Iniciar Sesion
+                  </a>
+              </li>
+              <li class="sep">
+                  |
+              </li>
+              <li>
+                  <a class="link link-p" href="#">
+                     Registrate
+                  </a>
+              </li>
+
+          </ul>
+
+      </div>
+
+
+
+
+
+
+
+    <!--Aqui va el formulario-->
+    <form class="row-g-3-needs-validation position-absolute top-0 start-50 translate-middle-x" novalidate>
+        <div class="col-md-19">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="validationCustom01" value="" required>
+          <div class="valid-feedback">
+            Bien!
+          </div>
+        </div>
+        <br>
+        <div class="col-md-19">
+          <label for="validationCustom02" class="form-label">Correo electronico</label>
+          <input type="text" class="form-control" id="validationCustom02" value="" required>
+          <div class="valid-feedback">
+            Bien!
+          </div>
+        </div>
+        <br>
+
+
+        <div class="col-md-19">
+          <label for="validationCustom04" class="form-label">Selecciona el dispositivo</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Escoje...</option>
+            <option>Computador</option>
+            <option>Celular</option>
+          </select>
+          <div class="invalid-feedback">
+            seleccione una opcion valida.
+          </div>
+        </div>
+
+        <div class="col-md-19">
+            <label for="validationCustom04" class="form-label">Selecciona el tipo de mensaje</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">Escoje...</option>
+              <option>Sugerencia</option>
+              <option>Queja</option>
+            </select>
+          </div>
+          <br>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Comments</label>
+          </div>
+<br>
+</style>
+<div class="div">
+    <button id ="boton" class="boton" onclick="transform_loader()">
+        <p id = "boton-text" class="boton-text">Enviar</p>
+    </button>
+
+
+    </div>
+
+    <script>
+        function transform_loader() {
+            let element = document.getElementById("boton");
+            let text = document.getElementById("boton-text");
+
+            element.classList.add("loader");
+            text.classList.add("boton-text-a");
+        }
+    </script>
+      </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>

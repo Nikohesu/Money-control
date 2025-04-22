@@ -1,0 +1,142 @@
+@font-face {
+    font-family: League-spartan;
+    src: url(../fonts/League_Spartan/static/LeagueSpartan-Bold.ttf);
+}
+
+body {
+    margin: 0;
+    background-color: #faf7d8;
+}
+
+.nav{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+
+.nav-bar{
+    display:flex;
+    flex-direction: row;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-logo{
+    padding:10px;
+    height: auto;
+    width: clamp(150px,20vw,300px);
+}
+.icon {
+    width:clamp(30px,5vw,40px);
+    height: auto;
+    box-sizing: border-box;
+    padding: 5px;
+    
+}
+.link-p{
+    margin: 30px;
+    font-size: clamp(1px,1.7vw,50px)!important;
+}
+
+.link {
+    font-family: League-spartan;
+    text-decoration: none;
+    color :black;
+    font-size: clamp(20px,2vh,50px);
+}
+
+.li {
+    margin: 25px;
+    box-sizing: border-box;
+}
+
+.ur-nav{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.scr-cel-bar{
+    display: none
+}
+
+.hamburguesa{
+    display:flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    font-style: bold;
+    color: black;
+    transition: transform 0.5s ease;
+    margin-right: 20px;
+
+
+}
+.active-h{
+    transform: rotate(360deg);
+
+}
+.active-h div:first-child {
+    transform: rotate(-45deg);
+}
+.active-h div:nth-child(2) {
+    opacity: 0;
+    
+}
+.active-h div:last-child {
+    transform: rotate(45deg);
+}
+
+.menu-hamburguesa{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f0b9;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    height:  0;
+    transition: height  0.5s ease ;
+}
+
+.active-menu-h{
+    height: 200px;
+}
+
+.linea {
+    width:20px;
+    height: 3px;
+    background-color: black;
+    margin : 2px;
+    transition: all 0.5s ease;
+    transform-origin: right;
+    
+}
+.me{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 600px){
+    .scr-cel-bar{
+        display: block;
+    }
+    .l-links{
+        display: none;
+    }
+    .me{
+        display: block;
+    }
+    .logo {
+        margin: auto;
+    }
+    
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo</title>
+</head>
+
+<body>
+    <style>
+        .obj {
+    display: flex;
+    flex-direction: column;
+}
+.linea {
+    width:20px;
+    height: 3px;
+    background-color: black;
+    margin : 2px;
+    transition: all 0.5s ease;
+    transform-origin: right;
+    
+}
+.obj:hover div:first-child {
+    transform: rotate(-45deg);
+}
+.obj:hover div:nth-child(2) {
+    opacity: 0;
+    
+}
+.obj:hover div:last-child {
+    transform: rotate(45deg);
+}
+    </style>
+        <div class="obj">
+            <div class="linea">
+            </div>
+
+            <div class="linea">
+            </div>
+            <div class="linea">
+            </div>
+        </div>
+
+</body>
+</html>

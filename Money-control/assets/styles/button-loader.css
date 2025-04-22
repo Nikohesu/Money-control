@@ -1,0 +1,41 @@
+body {
+  margin: 0
+}
+
+.loader{
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: solid 10px #0000003d ;
+  border-left: solid 10px #00000027  ;
+  border-radius: 50%;
+  animation : 2s girar infinite both;
+
+}
+
+button{
+  width: 100px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 40px;
+  transition: all;
+  transition-duration: 2s;
+  
+}
+.boton-text{
+  opacity:100%;
+  transition: opacity 1s; 
+}
+.boton-text-a{
+  opacity:0;
+}
+
+
+@keyframes girar{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,143 @@
+@font-face {
+    font-family:SourGummy-SemiBold ;
+    src: url(../Money-control/assets/fonts/SourGummy-SemiBold.ttf);
+}
+
+body {
+    margin: 0;
+    background-color: #E0FFC3;
+}
+
+.nav{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.nav-bar{
+    display:flex;
+    flex-direction: row;
+    background-color: #CEF4A9;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-logo{
+    padding:10px;
+    height: clamp(40px,3vw,150px);
+    width: auto;
+}
+.icon {
+    width:clamp(30px,5vw,40px);
+    height: auto;
+    box-sizing: border-box;
+    padding: 5px;
+    
+}
+.link-p > img {
+    padding-right: 5px;
+    width:clamp(30px,2vw,40px);
+    height: auto;
+}
+.link {
+    font-family: SourGummy-SemiBold;
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
+    color:black;
+    
+    
+}
+.sep{
+    font-family: SourGummy-SemiBold;
+    font-size: 40px;
+}
+.ur-nav{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.link-p{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    
+}
+.scr-cel-bar{
+    display: none
+}
+
+.hamburguesa{
+    display:flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    font-style: bold;
+    color: black;
+    transition: transform 0.5s ease;
+
+
+}
+.active-h{
+    transform: rotate(360deg);
+
+}
+.active-h div:first-child {
+    transform: rotate(-45deg);
+}
+.active-h div:nth-child(2) {
+    opacity: 0;
+    
+}
+.active-h div:last-child {
+    transform: rotate(45deg);
+}
+
+.menu-hamburguesa{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #CEF4A9;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    height:  0;
+    transition: height  0.5s ease ;
+}
+
+.active-menu-h{
+    height: 100px;
+}
+
+.linea {
+    width:20px;
+    height: 3px;
+    background-color: black;
+    margin : 2px;
+    transition: all 0.5s ease;
+    transform-origin: right;
+    
+}
+.me{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 600px){
+    .scr-cel-bar{
+        display: block;
+    }
+    .l-links{
+        display: none;
+    }
+    .me{
+        display: block;
+    }
+    
+}
