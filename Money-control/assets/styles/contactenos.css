@@ -117,5 +117,10 @@ form-floating {
   flex-direction: row;
 
   align-items: center;
-  
 }
+
+.logo-login {
+  width: clamp(200px, 15vw, 500px);
+  height: auto;
+  margin: 10px auto;
+} }
