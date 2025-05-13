@@ -16,6 +16,13 @@ def add_user (nombre,email,contraseña):
     cursor.execute("INSERT INTO usuarios (nombre,email,contrasena) VALUES (%s,%s,%s)",(nombre,email,contraseña))
     conn.commit()
     conn.close
+def del_user (nombre,email,contraseña):
+    conn= mysql.connector.connect(**db_connfig)
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM usuarios WHERE nombre=%s AND email=%s AND contrasena=%s",(nombre,email,contraseña))
+    conn.commit()
+    conn.close
+
 
 @app.route("/")
 def formulario ():
@@ -26,8 +33,12 @@ def procesar_formulario() :
     nombre = request.form["nombre"]
     email = request.form["email"]
     contrasena = request.form["contrasena"]
-    
-    add_user(nombre,email,contrasena)
+    accion = request.form["but"]
+
+    if accion=="Enviar":
+        add_user(nombre,email,contrasena)
+    if accion=="eliminar":
+        del_user(nombre,email,contrasena)
 
     return redirect(url_for("exito"))
 
