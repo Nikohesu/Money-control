@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                email
+            </th>
+            <th>
+                contraseña
+            </th>
+        </tr>
+        {%for users in usuarios%}
+        <tr>        
+            <td> {{users[1]}}</td>
+            <td> {{users[2]}}</td>
+            <td> {{users[3]}}</td>
+        </tr>
+     
+
+   
+        {%endfor%}
+    </table>
+    <a href="procesar_formulario">agregar nuevo usuario</a>
+    <a href="borrar_usuario"> borrar_usuario</a>
+    
+</body>
+</html>
