@@ -1,0 +1,290 @@
+
+@font-face {
+    font-family:SourGummy-Light ;
+    src: url(fonts/SourGummy-Light.ttf);
+}
+@font-face {
+    font-family: League-spartan;
+    src: url(fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family:SourGummy-SemiBold ;
+  src: url(fonts/SourGummy-SemiBold.ttf);
+}
+
+body{
+    margin:0;
+    background-color: #E0FFC3
+}
+
+.nav{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.nav-bar{
+  display:flex;
+  flex-direction: row;
+  background-color: #CEF4A9;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-logo{
+  padding:10px;
+  height: clamp(40px,3vw,150px);
+  width: auto;
+}
+.icon {
+  width:clamp(30px,5vw,40px);
+  height: auto;
+  box-sizing: border-box;
+  padding: 5px;
+  
+}
+.link-p > img {
+  padding-right: 5px;
+  width:clamp(30px,2vw,40px);
+  height: auto;
+}
+.link {
+  font-family: SourGummy-SemiBold;
+  font-size: 20px;
+  padding: 15px;
+  text-decoration: none;
+  color:black;
+  
+  
+}
+.sep{
+  font-family: SourGummy-SemiBold;
+  font-size: 40px;
+}
+.ur-nav{
+  list-style: none;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.link-p{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  
+}
+.scr-cel-bar{
+  display: none
+}
+
+.hamburguesa{
+  display:flex;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  font-style: bold;
+  color: black;
+  transition: transform 0.5s ease;
+
+
+}
+.active-h{
+  transform: rotate(360deg);
+
+}
+.active-h div:first-child {
+  transform: rotate(-45deg);
+}
+.active-h div:nth-child(2) {
+  opacity: 0;
+  
+}
+.active-h div:last-child {
+  transform: rotate(45deg);
+}
+
+.menu-hamburguesa{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: #CEF4A9;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  height:  0;
+  transition: height  0.5s ease ;
+}
+
+.active-menu-h{
+  height: 100px;
+}
+
+.linea {
+  width:20px;
+  height: 3px;
+  background-color: black;
+  margin : 2px;
+  transition: all 0.5s ease;
+  transform-origin: right;
+  
+}
+.me{
+  display: none;
+}
+
+
+
+@media screen and (max-width: 600px){
+  .scr-cel-bar{
+      display: block;
+  }
+  .l-links{
+      display: none;
+  }
+  .me{
+      display: block;
+  }
+  
+}
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo {
+    display: block;
+    width: clamp(300px, 50vw, 500px);
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 0px ;
+    transition: all 1s ease;
+   
+}
+.campo:active {
+  transform: scale(0.95);
+}
+
+.campo:focus {
+    border: 3px;
+}
+
+
+.input-label{
+    display: block;
+    font-family:SourGummy-Light ;
+    font-size: 30px;
+
+
+}
+.logo-login {
+  width: clamp(200px,16vw, 500px);
+  height: auto;
+  margin: 20px auto;
+}
+.boton{
+  background-color:#CEF4A9;
+  font-size: 20px;
+  border-radius: 40px;
+  width: 250px;
+  margin:10px auto;
+  font-family:SourGummy-Light ;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 1s;
+  
+}
+.loader{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: solid 10px #0000003d ;
+    border-left: solid 10px #00000027  ;
+    border-radius: 50%;
+    animation : 2s girar infinite both;
+  
+  }
+
+.boton-text{
+    opacity:100%;
+    transition: opacity 1s; 
+  }
+.boton-text-a{
+    opacity:0;
+  }
+  /* From Uiverse.io by Satwinder04 */ 
+.input-container {
+  position: relative;
+  margin: 50px auto;
+  width: 200px;
+}
+
+.input-container input[type="text"] {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ccc;
+  transition: all 2s ease;
+  pointer-events: none;
+}
+
+.input-container input[type="text"]:focus ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
+}
+
+  
+  
+@keyframes girar{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+.t-form{
+    font-family: League-spartan;
+    font-size: 40px;
+    margin: auto;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='registro.css') }}">
+</head>
+<body>
+    <nav class="nav">
+
+        <div class="nav-bar">
+
+
+            <div class="logo">
+                <a class="link-h" href="#">
+                    <img class="img-logo" src="{{url_for('static', filename='png/Money-control.png')}}">
+                </a>
+            </div>
+        <div class="l-links">
+
+            <ul class="ur-nav">
+                <li >
+                    <a class="link link-p" href="#">
+                        Iniciar Sesion
+                    </a>
+                </li>
+                <li class="sep">
+                    |
+                </li>
+                <li>
+                    <a class="link link-p" href="#">
+                       Registrate
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class ="scr-cel-bar">
+            <button id="hamburguesa" class="hamburguesa" onclick="open_close_burger()">
+                <div class="linea">
+                </div>
+    
+                <div class="linea">
+                </div>
+                <div class="linea">
+                </div>
+            </button>
+        </div>
+
+        
+        </div>
+        <!--fin del navbar principal-->
+
+        <!--aca inica el diseño del contenido del menu hamburguesa-->
+        <div class="me">
+            <ul class="menu-hamburguesa" id="menu-h">
+                <li>
+                    <a class="link link-d" name="link_animate" href="#">Link-1</a>
+                </li>
+                <li>
+                    <a  class="link link-d" name="link_animate" href="#">Link-2</a>
+                </li>
+                <li>
+                    <a class="link link-d" id="link_animate" href="#">Link-3</a>
+                </li>
+            </ul>
+        </div>
+    
+    </nav> 
+
+    <div class="login">
+        <form action="/procesar_formulario" method="post" >
+
+            <img class="logo-login" src="{{url_for('static',filename='png/money.png')}}" alt="logo money control">
+            <h2 class="t-form">Registrarte </h2>
+
+            <label for="nombre" class="input-label">nombre:</label>
+            <input type="text" class="campo" name="nombre" required>
+
+            <label for="apellido" class="input-label">apellido:</label>
+            <input type="text" class="campo" name="apellido" required>
+
+            <label for="telefono" class="input-label">telefono:</label>
+            <input type="tel" class="campo" name="telefono" required>
+
+            <label for="email" class="input-label">email:</label>
+            <input type="email" class="campo" name="email" required>
+
+            <label for="contrasena" class="input-label">contraseña:</label>
+            <input type="password" class="campo" name="contrasena" required>
+
+            <label for="genero" class="input-label">genero:</label>
+            <select  class="campo" name="genero" required>genero
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+
+
+
+            <button type="submit" name="but" value="Enviar" id ="boton" class="boton">
+                <p id = "boton-text" class="boton-text">Iniciar Sesion</p>
+            </button>
+
+        </form>
+    </div>
+    <script src="../static/main.js"></script>
+</body>
+</html>
