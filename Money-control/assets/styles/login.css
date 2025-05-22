@@ -166,7 +166,19 @@ body{
     display: block;
     width: clamp(300px, 50vw, 500px);
     height: 30px;
+    border-radius: 10px;
+    border: 0px ;
+    transition: all 1s ease;
+   
 }
+.campo:active {
+  transform: scale(0.95);
+}
+
+.campo:focus {
+    border: 3px;
+}
+
 .input-label{
     display: block;
     font-family:SourGummy-Light ;
@@ -180,13 +192,15 @@ body{
   margin: 10px auto;
 }
 .boton{
-  background-color:white;
+  background-color:#CEF4A9;
   font-size: 20px;
   border-radius: 40px;
   width: 250px;
   margin:10px auto;
   font-family:SourGummy-Light ;
-
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
   transition: all;
   transition-duration: 1s;
   
@@ -209,6 +223,54 @@ body{
 .boton-text-a{
     opacity:0;
   }
+  /* From Uiverse.io by Satwinder04 */ 
+.input-container {
+  position: relative;
+  margin: 50px auto;
+  width: 200px;
+}
+
+.input-container input[type="text"] {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ccc;
+  transition: all 2s ease;
+  pointer-events: none;
+}
+
+.input-container input[type="text"]:focus ~ .label {
+  top: -20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
+}
+
   
   
 @keyframes girar{

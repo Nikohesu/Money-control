@@ -72,9 +72,9 @@ form-floating {
     margin: auto;
 }
 
-body {
-  background-color: aquamarine;
-}
+:root,
+[data-bs-theme=light] {
+  --bs-blue: #0d6efd;
 
 .nav{
   display:flex;
@@ -100,3 +100,27 @@ body {
   box-sizing: border-box;
   padding: 5px;
 }
+
+.sep{
+  font-family: SourGummy-SemiBold;
+  font-size: 40px;
+}
+.ur-nav{
+  list-style: none;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.link-p{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.logo-login {
+  width: clamp(200px, 15vw, 500px);
+  height: auto;
+  margin: 10px auto;
+} }
