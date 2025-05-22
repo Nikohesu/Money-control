@@ -77,3 +77,4 @@ def form () :
      contraseña= request.form["contrasena"]
 
      del_users(email,contraseña)"""
+#crear un formulario llamado registro ent:data {email,nombre,apellido,tel,contraseña,genero}
