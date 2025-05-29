@@ -1,0 +1,155 @@
+body {
+    background-color: #EBFDEA;
+}
+
+.boton{
+    width: 244px;
+    height: 34px;
+    background-color: #99CC97;
+    border: 2px solid #99CC97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #84b082;
+    border-color: #84b082;
+    transform: translateY(-2px);
+}
+
+/* SEGUNDO BOTON */
+
+.boton2{
+    width: 244px;
+    height: 34px;
+    background-color: #99CC97;
+    border: 2px solid #99CC97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: translateY(100px);
+}
+
+.boton2:hover {
+    background-color: #84b082;
+    border-color: #84b082;
+    transform: translateY(98px);
+}
+
+/* TERCER BOTON */
+
+.boton3{
+    width: 244px;
+    height: 34px;
+    background-color: #99CC97;
+    border: 2px solid #99CC97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: translateY(110px);
+}
+
+.boton3:hover {
+    background-color: #84b082;
+    border-color: #84b082;
+    transform: translateY(108px);
+}
+
+/* CUARTO BOTON */
+
+.boton4{
+    width: 244px;
+    height: 34px;
+    background-color: #99CC97;
+    border: 2px solid #99CC97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: translateY(120px);
+}
+
+.boton4:hover {
+    background-color: #84b082;
+    border-color: #84b082;
+    transform: translateY(118px);
+}
+
+/* QUINTO BOTON */
+
+.boton5{
+    width: 244px;
+    height: 34px;
+    background-color: #99CC97;
+    border: 2px solid #99CC97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: translateY(130px);
+}
+
+.boton5:hover {
+    background-color: #84b082;
+    border-color: #84b082;
+    transform: translateY(128px);
+}
+
+/* TERCER BOTON */
+
+.boton6{
+    width: 244px;
+    height: 34px;
+    background-color: #99CC97;
+    border: 2px solid #99CC97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: translateY(140px);
+}
+
+.boton6:hover {
+    background-color: #84b082;
+    border-color: #84b082;
+    transform: translateY(138px);
+}
+
+/*EL OTRO CUADRADO CON BORDERS Y FONDO "TRANSPARENTE" */
+.cuadrado {
+    width: 500px;
+    height: 500px;
+    background-color: #99CC97;
+    border: 2px solid #99CC97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    transform: translateX(300px);
+    transform: translateY(px);
+    
+}

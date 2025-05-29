@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money-control home</title>
+    <link rel=stylesheet href="../assets/styles/nav-bar-prin.css">
+</head>
+<body>
+    <!---inicio del nav bar-->
+    <nav class="nav">
+
+    </nav>
+
+    <script>
+        class but_nav {
+            constructor (id_b,id_o,funcion,active_class){
+                this.id_b = id_b;
+                this.id_o = id_o;
+                this.funcion = funcion;
+                this.active_class = active_class;
+                this.obj =document.getElementById(id_o);
+                this.but = document.getElementById(id_b);
+                if (this.but) {
+                this.but.addEventListener('click', () => {
+                    console.log("clicck en el boton");
+                    this.funcion();
+                });
+   
+                }
+                if (this.obj) {
+                    this.obj.addEventListener('click', () => {
+                        event.stopPropagation();
+                        console.log("se presiono dentro del div");
+                    });
+                }
+                document.addEventListener('click', () => {
+                    this.obj.classList.remove(this.active_class);
+                    console.log('Se hizo clic en el html');
+                });
+            }
+
+
+    }
+        let notifications = new but_nav("button-notifications","div-notifications",open_close_notifications,"active-notifications");
+        let accout = new but_nav("button-accout","div-accout",open_close_accout,"active-accout");
+        /*alert("hello world");
+        let obj = document.getElementById("notifications");
+        obj.addEventListener('click', () => {
+            event.stopPropagation();
+            console.log('Se hizo clic en el boton');
+                });
+        document.addEventListener('click', () => {
+            obj.classList.remove("active-notifications");
+            console.log('Se hizo clic en el html');
+                });
+*/
+        function open_close_burger () {
+            let menu = document.getElementById("menu-h");
+            let hamburguesa = document.getElementById("hamburguesa");
+            menu.classList.toggle("active-menu-h");
+            hamburguesa.classList.toggle("active-h");
+        
+
+        }
+        function open_close_notifications(){
+            let notifications = document.getElementById("div-notifications");
+            notifications.classList.toggle("active-notifications");
+            event.stopPropagation();
+            console.log("vivo");
+            /*if (!notifications.contains(event.target)) {
+                notifications.classList.remove("active-notifications");
+                }
+*/     
+        }
+        function open_close_accout(){
+            let accout = document.getElementById("div-accout");
+            accout.classList.toggle("active-accout");
+            event.stopPropagation();
+            console.log("vivo");
+        }
+    </script>
+    
+</body>
+</html>
