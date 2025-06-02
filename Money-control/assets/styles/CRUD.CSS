@@ -331,10 +331,10 @@ body {
     height: 70%;
     position: fixed;
     right: 50%;
-    top: 50%;
+    top: 70%;
     border-radius: 20px;
     background-color: var(--primary-color);
-    transform: translate(50%, -50%);
+    transform: translate(50%, -70%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -352,9 +352,7 @@ title-c{
     margin: 20px;
     
 }
-.user-info{
 
-}
 .user-info > ul{
     list-style: none;
     display: flex;
@@ -382,6 +380,25 @@ title-c{
     justify-content: center;
     overflow:auto;
 }
+/* Estilos para la barra de scroll */
+.inf-users::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar vertical */
+    height: 10px; /* Altura del scrollbar horizontal */
+  }
+  
+  .inf-users::-webkit-scrollbar-track {
+    background: #f0f0f034; /* Color del fondo del track */
+    border-radius: 10px;
+  }
+  
+  .inf-users::-webkit-scrollbar-thumb {
+    background: var(--secondary-color); /* Color del scroll */
+    border-radius: 10px;
+  }
+  
+  .inf-users::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color-hover); /* Color al pasar el mouse */
+  }
 
 .opc-CRUD{
     width: 20%;
@@ -403,7 +420,7 @@ title-c{
     background-color: var(--secondary-color);
     border-radius: 10px;
     width: auto;
-    height: 20vh;
+    height: clamp(50px,30%,100px);
     transition: all;
     transition-duration:0.5s;
     margin: 10px;
