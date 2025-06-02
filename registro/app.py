@@ -28,7 +28,7 @@ def del_user (nombre,email,contrasena):
 def formulario ():
     return render_template("registro.html")
 
-@app.route("/procesar_formulario", methods=["POST"])
+@app.route("/procesar_formulario", methods=["GET", "POST"])
 def procesar_formulario() :
     nombre = request.form["nombre"]
     apellido = request.form["apellido"]
@@ -42,11 +42,15 @@ def procesar_formulario() :
     if accion=="Enviar":
         add_user(nombre,apellido,telefono,email,contrasena,genero)
 
-    return redirect(url_for("home"))
+    return redirect(url_for("home_CRUD"))
 
-@app.route("/home")
-def home():
-    return render_template("home.html")
+@app.route("/home-CRUD")
+def home_CRUD():
+    conn= mysql.connector.connect(**db_connfig)
+    cursor = conn.cursor()
+    cursor.execute("SELECT id, nombre, apellido, telefono,email,contrasena, genero FROM registros")
+    usuarios = cursor.fetchall()
+    return render_template("CRUD.html", usuarios=usuarios)
 
 if __name__ == "__main__":
     app.run(debug=True)
