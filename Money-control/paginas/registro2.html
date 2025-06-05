@@ -23,22 +23,16 @@
             <ul class="ur-nav">
                 <li >
                     <a class="link link-p" href="#">
-                        <img class="icon" src="../assets/vectores/premium.svg">
-                        Premium
+                        Iniciar Sesion
                     </a>
                 </li>
                 <li class="sep">
                     |
                 </li>
                 <li>
-                    <button class="nav-button" id="button-notifications">
-                        <img class="icon" src="../assets/vectores/notiications.svg">
-                    </button>
-                </li>
-                <li>
-                    <button class="nav-button" id="button-accout">
-                        <img class="icon" src="../assets/vectores/profile.svg" >
-                    </button>
+                    <a class="link link-p" href="#">
+                        Registrarse
+                    </a>
                 </li>
 
             </ul>
@@ -75,62 +69,73 @@
                 </li>
             </ul>
         </div>
-
-        <div class="div-notifications" id="div-notifications">
-
-        </div>
-
-        <div class="div-accout" id="div-accout">
-
-        </div>
     
     </nav> 
+    <div class="sig-in">  
+        <div>
+            <img class="logo-form" src="../assets/png/money.png" alt="logo Money-control">
+        </div>
+        <h2>Registrarse</h2>       
+        <form>
+            
+            <div class="camp">
+                <input type="text" class="campo input" name="Nombre" placeholder="  ">
+                <label class="label" for="Nombre">Nombre:</label>
+                <span class="outline"></span>
+            </div>
+           
+            <div class="camp">
+                <input placeholder="  " type="text" class="campo input" name="Apellido">
+                <label class="label" for="Apellido">Apellido:</label>
+                <span class="outline"></span>
+            </div>
+            
+            <div class="camp">
+                <input placeholder="  " type="text" class="campo input" name="Usuario">
+                <label class="label" for="Usuario">Usuario:</label>
+                <span class="outline"></span>
+            </div>
+            
+            <div class="camp">
+                <input placeholder="  " type="password" class="campo input" name="Contraseña">
+                <label class="label" for="Contraseña">Contraseña:</label>
+                <span class="outline"></span>
+            </div>
+            
+            <div class="camp">
+                <input placeholder="  " type="email" class="campo input" name="Email">
+                <label class="label" for="Email">Email:</label>
+                <span class="outline"></span>
+            </div>
+            
+            <div class="camp">
+                <input placeholder="  " type="tel" class="campo input" name="Telefono">
+                <label class="label" for="Telefono">Teléfono:</label>
+                <span class="outline"></span>
+            </div>
+            
+            <div class="camp">
+                <input placeholder="  " type="number" class="campo input" name="Edad">
+                <label class="label" for="Edad">Edad:</label>
+                <span class="outline"></span>
+            </div>
 
 
+            <div class="camp">
+                <select class="campo select" name="genero">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+            </div>
+
+
+            <button class="sent"> Enviar</button>
+
+        </form>
     
+        
+    </div>
     <script>
-        class but_nav {
-            constructor (id_b,id_o,funcion,active_class){
-                this.id_b = id_b;
-                this.id_o = id_o;
-                this.funcion = funcion;
-                this.active_class = active_class;
-                this.obj =document.getElementById(id_o);
-                this.but = document.getElementById(id_b);
-                if (this.but) {
-                this.but.addEventListener('click', () => {
-                    console.log("clicck en el boton");
-                    this.funcion();
-                });
-   
-                }
-                if (this.obj) {
-                    this.obj.addEventListener('click', () => {
-                        event.stopPropagation();
-                        console.log("se presiono dentro del div");
-                    });
-                }
-                document.addEventListener('click', () => {
-                    this.obj.classList.remove(this.active_class);
-                    console.log('Se hizo clic en el html');
-                });
-            }
-
-
-    }
-        let notifications = new but_nav("button-notifications","div-notifications",open_close_notifications,"active-notifications");
-        let accout = new but_nav("button-accout","div-accout",open_close_accout,"active-accout");
-        /*alert("hello world");
-        let obj = document.getElementById("notifications");
-        obj.addEventListener('click', () => {
-            event.stopPropagation();
-            console.log('Se hizo clic en el boton');
-                });
-        document.addEventListener('click', () => {
-            obj.classList.remove("active-notifications");
-            console.log('Se hizo clic en el html');
-                });
-*/
         function open_close_burger () {
             let menu = document.getElementById("menu-h");
             let hamburguesa = document.getElementById("hamburguesa");
@@ -139,22 +144,7 @@
         
 
         }
-        function open_close_notifications(){
-            let notifications = document.getElementById("div-notifications");
-            notifications.classList.toggle("active-notifications");
-            event.stopPropagation();
-            console.log("vivo");
-            /*if (!notifications.contains(event.target)) {
-                notifications.classList.remove("active-notifications");
-                }
-*/     
-        }
-        function open_close_accout(){
-            let accout = document.getElementById("div-accout");
-            accout.classList.toggle("active-accout");
-            event.stopPropagation();
-            console.log("vivo");
-        }
+
     </script>
     
 </body>
