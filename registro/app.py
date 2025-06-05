@@ -9,16 +9,14 @@ db_connfig = {
     "password" : "1217",
     "database" : "formulario"
 }
+conn = mysql.connector.connect(**db_connfig)
+cursor = conn.cursor()
 
 def add_user (nombre,apellido,telefono,email,contrasena,genero):
-    conn= mysql.connector.connect(**db_connfig)
-    cursor = conn.cursor()
     cursor.execute("INSERT INTO registros (nombre,apellido,telefono,email,contrasena,genero) VALUES (%s,%s,%s,%s,%s,%s)",(nombre,apellido,telefono,email,contrasena,genero))
     conn.commit()
     conn.close
 def del_user (nombre,email,contrasena):
-    conn= mysql.connector.connect(**db_connfig)
-    cursor = conn.cursor()
     cursor.execute("DELETE FROM usuarios WHERE nombre=%s AND email=%s AND contrasena=%s",(nombre,email,contrasena))
     conn.commit()
     conn.close
@@ -30,13 +28,13 @@ def formulario ():
 
 @app.route("/procesar_formulario", methods=["GET", "POST"])
 def procesar_formulario() :
-    nombre = request.form["nombre"]
-    apellido = request.form["apellido"]
-    telefono = request.form["telefono"]
-    email = request.form["email"]
+    nombre = request.form["Nombre"]
+    apellido = request.form["Apellido"]
+    telefono = request.form["Telefono"]
+    email = request.form["Email"]
 
-    contrasena = request.form["contrasena"]
-    genero = request.form["genero"]
+    contrasena = request.form["Contrasena"]
+    genero = request.form["Genero"]
     accion = request.form["but"]
 
     if accion=="Enviar":
@@ -46,11 +44,25 @@ def procesar_formulario() :
 
 @app.route("/home-CRUD")
 def home_CRUD():
-    conn= mysql.connector.connect(**db_connfig)
-    cursor = conn.cursor()
     cursor.execute("SELECT id, nombre, apellido, telefono,email,contrasena, genero FROM registros")
     usuarios = cursor.fetchall()
     return render_template("CRUD.html", usuarios=usuarios)
+
+@app.route("/delete-user")
+def delete_user (id) :
+    return render_template ("Delete.html")
+
+@app.route("/opc-crud", methods=["GET", "POST"])
+def opc_crud () :
+    opc = request.form["id"]
+    but = request.form["but"]
+
+    if but == "Eliminar":
+        return redirect(url_for(delete_user(opc)))
+    
+    elif but == "volver":
+        return redirect(url_for(home_CRUD))
+    
 
 if __name__ == "__main__":
     app.run(debug=True)

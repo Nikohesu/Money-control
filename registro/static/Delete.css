@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: SourGummy-Light;
-    src: url(../static/fonts/SourGummy-Light.ttf);
+    src: url(../static/fonts/SourGummy-Light.ttf)
 }
 
 :root {
@@ -15,14 +15,14 @@
     --dark-primary-color:#8FB775;
     /*colores posibles*/
     --light-green: #8aea92ff;
---mantis: #6bb572ff;
---shamrock-green: #5b9a62ff;
---fern-green: #4b7f52ff;
---cal-poly-green: #265031ff;
---dark-green: #8FB775;
---dark-green-2: #01200fff;
---dark-green-3: #011b09ff;
---night: #011502ff;
+    --mantis: #6bb572ff;
+    --shamrock-green: #5b9a62ff;
+    --fern-green: #4b7f52ff;
+    --cal-poly-green: #265031ff;
+    --dark-green: #8FB775;
+    --dark-green-2: #01200fff;
+    --dark-green-3: #011b09ff;
+    --night: #011502ff;
 }
 
 body {
@@ -159,8 +159,9 @@ body {
 .me{
     display: none;
 }
-/*implementacion CRUD*/
-.nav-lateral-L {
+
+.nav-lateral {
+    width: 7%;
     position: fixed;
     top : 50%;
     left : 0;
@@ -168,13 +169,6 @@ body {
 
 
 }
-.nav-lateral-R {
-    position: fixed;
-    right : 0;
-    top : 50%;
-    transform: translateY(-50%);
-}
-/*hasta aqui implementacion CRUD*/
 .ul-nav-lateral{
     list-style: none;
     display: flex;
@@ -186,7 +180,6 @@ body {
     margin: 10px;
 
 }
-
 .lateral-button{
     border: none;
     display: flex;
@@ -325,115 +318,113 @@ body {
     font-size: 100%;
 }
 
-/* aqui inicia todo el CRUD*/
-.CRUD{
-    width: 80vw;
-    height: 70%;
-    position: fixed;
-    right: 50%;
+/*aqui inicia el formulario de resgistro*/
+.sig-in{
+    aspect-ratio: 9/11;
+    position:absolute;
     top: 70%;
-    border-radius: 20px;
-    background-color: var(--primary-color);
-    transform: translate(50%, -70%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.opc-content{
-    width: 85%;
-    height: 85%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-title-c{
-    margin: 20px;
-    font-family: SourGummy-Light ;
-    
-}
-
-.user-info > ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0;
-    font-family: SourGummy-Light ;
-    font-size: clamp(10px,2vw,20px);
-    background-color:var(--secondary-color);
-    margin:10px ;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-.user-info >ul > li{
-    margin: 10px;
-    box-sizing: border-box;
-}
-.inf-users{
-    width: 80%;
-    height: 90%;
-    margin: 10px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Mejor que 'center' en este caso */
-    overflow-y: auto; /* solo scroll vertical */
-    padding-top: 10px; /* evita que el margen del primer hijo se recorte */
-}
-/* Estilos para la barra de scroll */
-.inf-users::-webkit-scrollbar {
-    width: 10px; /* Ancho del scrollbar vertical */
-    height: 10px; /* Altura del scrollbar horizontal */
-  }
-  
-  .inf-users::-webkit-scrollbar-track {
-    background: #f0f0f034; /* Color del fondo del track */
-    border-radius: 10px;
-  }
-  
-  .inf-users::-webkit-scrollbar-thumb {
-    background: var(--secondary-color); /* Color del scroll */
-    border-radius: 10px;
-  }
-  
-  .inf-users::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-color-hover); /* Color al pasar el mouse */
-  }
-
-.opc-CRUD{
-    width: 20%;
-    height: 90%;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.opc-button {
-    aspect-ratio: 1/1;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    height: 80vh;
     width: auto;
-    height: clamp(50px,30%,100px);
+    background-color:var(--primary-color);
+    box-shadow: 0px 1px 2px #00000080;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.sig-in > h2 {
+    font-family: SourGummy-Light;
+}
+.sig-in > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.camp{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    position: relative;
+}
+.logo-form{
+    height: clamp(5px,20vh,100px);
+    width: auto;
+}
+.campo {
+    width: clamp(300px, 50vw, 500px);
+    height: 45px;
+    border-radius: 10px;
+    transition: all 1s ease;
+    border: none;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+   
+}
+.label{
+    font-size: 100%;
+    
+    font-family: SourGummy-Light;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+}
+.outline{
+    width: 0%;
+    height: 2px;
+    background-color: black;
     transition: all;
-    transition-duration:0.5s;
+    transition-duration: 0.3s;
+
+}
+
+.input:focus {
+    outline: none;
+}
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+    transform: translateY(-50%) scale(0.8);
+    margin: 0em;
+    margin-left: 0;
+    padding: 0.4em;
+    background-color: transparent;
+}
+.input:focus ~ .outline{ /*el ~ es para hermanos generales*/
+    width: 98%;
+}
+
+.select {
+    display:block;
+    font-family: SourGummy-Light ;
+}
+.opc-delete{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.opc-del {
+    font-family: SourGummy-Light;
+    font-size: 20px;
+    background-color: var(--secondary-color);
+    border : none;
+    border-radius: 10px;
+    width: fit-content;
+    height: 40px;
     margin: 10px;
-}
 
-.opc-button:hover{
-    transform: scale(1.1);
-    background-color: var(--secondary-color-hover);
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
-
 
 
 @media screen and (max-width: 600px){

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money-control home</title>
-    <link rel=stylesheet href="{{ url_for('static', filename='registro.css') }}">
+    <link rel=stylesheet href="{{ url_for('static', filename='Delete.css') }}">
 </head>
 <body>
     <!---inicio del nav bar-->
@@ -75,18 +75,18 @@
         <div>
             <img class="logo-form" src="{{ url_for('static', filename='png/money.png') }}" alt="logo Money-control">
         </div>
-        <h2>Registrarse</h2>       
-        <form action="/procesar_formulario" method="post" >
+        <h2>Eliminar</h2>       
+        <form action="/Borra_usuario" method="post" >
             
             <div class="camp">
                 <input type="text" class="campo input" name="Nombre" placeholder="  " required>
                 <label class="label" for="Nombre">Nombre:</label>
                 <span class="outline"></span>
             </div>
-           
+                 
             <div class="camp">
-                <input placeholder="  " type="text" class="campo input" name="Apellido" required>
-                <label class="label" for="Apellido">Apellido:</label>
+                <input placeholder="  " type="email" class="campo input" name="Email" required>
+                <label class="label" for="Email">Email:</label>
                 <span class="outline"></span>
             </div>
             
@@ -97,28 +97,12 @@
                 <span class="outline"></span>
             </div>
             
-            <div class="camp">
-                <input placeholder="  " type="email" class="campo input" name="Email" required>
-                <label class="label" for="Email">Email:</label>
-                <span class="outline"></span>
-            </div>
-            
-            <div class="camp">
-                <input placeholder="  " type="tel" class="campo input" name="Telefono" required>
-                <label class="label" for="Telefono">Teléfono:</label>
-                <span class="outline"></span>
+
+            <div class="opc-delete">
+                <button class="opc-del" name="but" value="Enviar"> Eliminar</button>
+                <button class="opc-del" name="but" value="Volver"> volver</button>
             </div>
 
-
-            <div class="camp">
-                <select class="campo select" name="Genero" required>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Femenino">Femenino</option>
-                </select>
-            </div>
-
-
-            <button class="sent" name="but" value="Enviar"> Enviar</button>
 
         </form>
     
