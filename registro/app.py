@@ -1,6 +1,7 @@
 from flask import Flask,render_template,request,redirect,url_for
 import mysql.connector
 
+
 app = Flask(__name__)
 
 db_connfig = {
@@ -12,20 +13,36 @@ db_connfig = {
 conn = mysql.connector.connect(**db_connfig)
 cursor = conn.cursor()
 
-def add_user (nombre,apellido,telefono,email,contrasena,genero):
-    cursor.execute("INSERT INTO registros (nombre,apellido,telefono,email,contrasena,genero) VALUES (%s,%s,%s,%s,%s,%s)",(nombre,apellido,telefono,email,contrasena,genero))
-    conn.commit()
-    conn.close
-def del_user (nombre,email,contrasena):
-    cursor.execute("DELETE FROM usuarios WHERE nombre=%s AND email=%s AND contrasena=%s",(nombre,email,contrasena))
-    conn.commit()
-    conn.close
-
-
 @app.route("/")
 def formulario ():
     return render_template("registro.html")
 
+#--------------------------------------------aqui estan la funciones CRUD----------------------------------------------------------------
+
+
+
+def add_user (nombre,apellido,telefono,email,contrasena,genero):
+    cursor.execute("INSERT INTO registros (nombre,apellido,telefono,email,contrasena,genero) VALUES (%s,%s,%s,%s,%s,%s)",(nombre,apellido,telefono,email,contrasena,genero))
+    conn.commit()
+    conn.close
+def del_user() :
+    pass
+def update_user():
+    pass
+"""def del_user (nombre,email,contrasena):
+    cursor.execute("DELETE FROM usuarios WHERE nombre=%s AND email=%s AND contrasena=%s",(nombre,email,contrasena))
+    conn.commit()
+    conn.close
+"""
+#-------------------------------------------aqui termian la funciones CRUD----------------------------------------------------------------
+
+
+#ruta principal (Insert)
+@app.route("/")
+def formulario ():
+    return render_template("registro.html")
+
+#prosesa formulario e inteviene los datos(Insert)
 @app.route("/procesar_formulario", methods=["GET", "POST"])
 def procesar_formulario() :
     nombre = request.form["Nombre"]
@@ -37,33 +54,30 @@ def procesar_formulario() :
     genero = request.form["Genero"]
     accion = request.form["but"]
 
-    if accion=="Enviar":
+    if accion=="enviar":
         add_user(nombre,apellido,telefono,email,contrasena,genero)
 
-    return redirect(url_for("home_CRUD"))
+    return redirect(url_for("home_crud"))
 
-@app.route("/home-CRUD")
+#luego de que se autentique el insert se lleva al home CRUD
+@app.route("/home-crud")
 def home_CRUD():
     cursor.execute("SELECT id, nombre, apellido, telefono,email,contrasena, genero FROM registros")
     usuarios = cursor.fetchall()
-    return render_template("CRUD.html", usuarios=usuarios)
+    return render_template("crud.html", usuarios=usuarios)
 
-@app.route("/delete-user")
-def delete_user (id) :
-    return render_template ("Delete.html")
 
-@app.route("/opc-crud", methods=["GET", "POST"])
-def opc_crud () :
-    opc = request.form["id"]
-    but = request.form["but"]
 
-    if but == "Eliminar":
-        return redirect(url_for(delete_user(opc)))
+@app.route("/opc-crud")
+def opc_crud() :
+    pass
+
+
+
+
+
+
     
-    elif but == "volver":
-        return redirect(url_for(home_CRUD))
-    
-
 if __name__ == "__main__":
     app.run(debug=True)
 
