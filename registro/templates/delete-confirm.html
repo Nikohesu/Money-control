@@ -76,23 +76,23 @@
             <img class="logo-form" src="{{ url_for('static', filename='png/money.png') }}" alt="logo Money-control">
         </div>
         <h2>Eliminar</h2>       
-        <form action="/Borra_usuario" method="post" >
+        <form action="/delete_confirm" method="post" >
             
             <div class="camp">
-                <input type="text" class="campo input" name="Nombre" placeholder="  " required>
-                <label class="label" for="Nombre">Nombre:</label>
+                <input type="text" class="campo input" name="Nombre"  disabled >
+                <label class="label" for="Nombre">{{user_name}}  {{user_lastname}}</label>
                 <span class="outline"></span>
             </div>
                  
             <div class="camp">
-                <input placeholder="  " type="email" class="campo input" name="Email" required>
-                <label class="label" for="Email">Email:</label>
+                <input placeholder="  " type="email" class="campo input" name="Email" disabled>
+                <label class="label" for="Email">{{user_email}}</label>
                 <span class="outline"></span>
             </div>
             
             
             <div class="camp">
-                <input placeholder="  " type="password" class="campo input" name="Contrasena" required>
+                <input placeholder="  " type="password" class="campo input" name="contrasena" required>
                 <label class="label" for="Contraseña">Contraseña:</label>
                 <span class="outline"></span>
             </div>
