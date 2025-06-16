@@ -7,7 +7,7 @@
     src: url(../static/fonts/SourGummy-Light.ttf)
 }
 
-:root {
+:root{
     --primary-color:#CEF4A9;
     --secondary-color:#AFDD91;
     --secondary-color-hover:#90C678;
@@ -21,7 +21,7 @@
     --cal-poly-green: #265031ff;
     --dark-green: #8FB775;
     --dark-green-2: #01200fff;
-    --dark-green-3: #011b09ff;
+    --dark-green-3: #008b09ff;
     --night: #011502ff;
 }
 
@@ -334,7 +334,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 .sig-in > h2 {
     font-family: SourGummy-Light;
@@ -345,23 +344,25 @@ body {
     align-items: center;
 }
 .camp{
+    
     width: fit-content;
     height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5px;
+    margin: 5px 10px;
     position: relative;
 }
 .logo-form{
-    height: clamp(5px,20vh,100px);
+    height: clamp(5px,13vh,100px);
     width: auto;
 }
 .campo {
-    width: clamp(300px, 50vw, 500px);
-    height: 45px;
+    width: clamp(300px, 30vw, 500px);
+    height: clamp(20px, 6vh, 45px);
     border-radius: 10px;
+    
     transition: all 1s ease;
     border: none;
     background-color: whitesmoke;
