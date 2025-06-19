@@ -23,6 +23,8 @@
     --dark-green-2: #01200fff;
     --dark-green-3: #008b09ff;
     --night: #011502ff;
+    /* variables numericas*/
+    
 }
 
 body {
@@ -38,6 +40,8 @@ body {
     display:flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    position: relative;
+    z-index: 10;
 }
 
 .nav-bar{
@@ -47,6 +51,8 @@ body {
     background-color: var(--primary-color);
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 4;
 }
 .img-logo{
     padding:10px;
@@ -140,11 +146,12 @@ body {
     padding: 0;
     margin: 0;
     height:  0;
-    transition: height  0.5s ease ;
+    transition: all  0.5s ease ;
 }
 
 .active-menu-h{
     height: 100px;
+    background-color: var(--prymary-color-hover);
 }
 
 .linea {
@@ -334,6 +341,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 .sig-in > h2 {
     font-family: SourGummy-Light;
@@ -430,6 +438,10 @@ body {
     }
     .me{
         display: block;
+    }
+    .sig-in {
+        width: 100vw;
+        height: 86vh;
     }
     
 }
