@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS Money_control CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci:
+
+USE Money_control;
+
+CREATE TABLE IF NOT EXISTS usuario {
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    telefono VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    contrasena VARCHAR(255) NOT NULL,
+    genero VARCHAR(100) NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+}
+
