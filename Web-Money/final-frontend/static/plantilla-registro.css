@@ -34,7 +34,7 @@ html{
 body{
     margin: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
     width: 100%;
     height: 100%;
     
@@ -60,7 +60,7 @@ body{
 }
 .logo-money{
     padding:10px;
-    height: 80%;
+    height: 95%;
     width: fit-content;
 
 }
@@ -97,7 +97,8 @@ body{
     font-size: 40px;
 }
 .burger-div-button{
-    display: none
+    display: none;
+    margin: 1rem;
 }
 .hamburguesa{
     display:flex;
@@ -158,44 +159,30 @@ body{
     display: none;
 }
 
-.main{
-    width: 100vw;
-    height: 100%;
-    background-color: var(--primary-color);
-    padding-top: var(--nav-size);
-    display: flow-root;
-    overflow-x: hidden;
+.c-sing{
     overflow-y: auto;
-    display: flex;
-    flex-direction: row;
-
- 
+    overflow-x: hidden;
 }
 
-main::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: 10px; /* Ancho del scrollbar vertical */
     height: 10px; /* Altura del scrollbar horizontal */
   }
   
-main::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     background: var(--secondary-color); /* Color del fondo del track */
     border-radius: 0;
   }
   
-main::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     background: var(--secondary-color); /* Color del scroll */
     border-radius: 10px;
   }
   
-main::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color-hover); /* Color al pasar el mouse */
   }
-.cuadrado{
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    margin: 10px;
-}
+
 aside{
     width: clamp(52px, 5vw, 60px);
     height: 50vh;
@@ -211,16 +198,41 @@ aside{
     left: 0;
 }
 
-.description{
-    background-color: var(--dark-green);
-    width: 50%;
-    height: 100%;
+
+.main{
+    padding-top: var(--nav-size);
+    display: flex;
+    flex-direction: row; /* Por defecto en fila */
+    width: 100%; /* Ocupa todo el ancho del contenedor principal */
+    height: 100%; /* Ocupa toda la altura disponible en el contenedor-principal */
 
 }
+
+/* Estilos para los dos contenedores interiores */
+.description,
 .sign-up{
-    background-color: var(--dark-green-2);
-    width: 50%;
-    height: 100%;
+    flex-basis: 50%; /* Cada uno toma el 50% del ancho base */
+    flex-grow: 1; /* Permite que crezcan para llenar el espacio */
+    flex-shrink: 1; /* Permite que se encojan si es necesario */
+    padding: 20px; /* Padding interno para el contenido */
+    box-sizing: border-box; /* Crucial para que padding no aumente el tamaño */
+}
+
+.description {
+    background-color: var(--dark-green); /* Verde claro de la imagen */
+}
+
+.sign-up {
+    background-color: var(--dark-green-2); /* Verde oscuro/negro de la imagen */
+}
+
+/* Estilos de los cuadrados */
+.cuadrado {
+    width: 80px; /* Tamaño del cuadrado más grande en la imagen */
+    height: 80px; 
+    background-color: red;
+    margin: 10px;/* Tamaño del cuadrado más grande en la imagen */
+
 }
 @media screen and (max-width: 895px){
     .main{

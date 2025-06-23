@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Control Layout</title>
+    <style>
+        /* --- Estilos CSS --- */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column; /* Para apilar el header y el contenedor principal */
+        }
+
+        /* Estilos del Header */
+        header {
+            background-color: #ffffff; /* Blanco o un color muy claro */
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50; /* Verde Money Control */
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo img {
+            height: 30px; /* Ajusta el tamaño de tu logo si usas una imagen */
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+
+        .nav-links .separator {
+            margin: 0 5px;
+            color: #ccc;
+        }
+
+        /* Contenedor principal para el layout de dos columnas */
+        .contenedor-principal {
+            flex-grow: 1; /* Permite que ocupe todo el espacio restante */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0; /* Asegúrate de que no haya padding aquí para que el main ocupe el 100% */
+            box-sizing: border-box;
+        }
+
+        .main-flex {
+            display: flex;
+            flex-direction: row; /* Por defecto en fila */
+            width: 100%; /* Ocupa todo el ancho del contenedor principal */
+            height: 100%; /* Ocupa toda la altura disponible en el contenedor-principal */
+            box-sizing: border-box;
+        }
+
+        /* Estilos para los dos contenedores interiores */
+        .contenedor-izquierdo,
+        .contenedor-derecho {
+            flex-basis: 50%; /* Cada uno toma el 50% del ancho base */
+            flex-grow: 1; /* Permite que crezcan para llenar el espacio */
+            flex-shrink: 1; /* Permite que se encojan si es necesario */
+            padding: 20px; /* Padding interno para el contenido */
+            box-sizing: border-box; /* Crucial para que padding no aumente el tamaño */
+            display: flex;
+            flex-direction: column; /* Para apilar el contenido interno */
+            align-items: flex-start; /* Alineación a la izquierda como en la imagen */
+            gap: 20px; /* Espacio entre elementos directos */
+            overflow: auto; /* Para permitir scroll si el contenido es mucho */
+            /* min-height: 100%; No es necesario si main-flex tiene 100% height y estos flex-grow */
+        }
+
+        .contenedor-izquierdo {
+            background-color: #b3e0b3; /* Verde claro de la imagen */
+        }
+
+        .contenedor-derecho {
+            background-color: #1a3a2f; /* Verde oscuro/negro de la imagen */
+        }
+
+        /* Estilos de los cuadrados */
+        .cuadrado {
+            width: 80px; /* Tamaño del cuadrado más grande en la imagen */
+            height: 80px; /* Tamaño del cuadrado más grande en la imagen */
+            background-color: red;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            box-sizing: border-box;
+            flex-shrink: 0; /* Evita que los cuadrados se encojan en la columna */
+        }
+
+        /* Contenedor para los cuadrados del lado derecho (apilados verticalmente) */
+        .cuadrados-derecha {
+            display: flex;
+            flex-direction: column; /* Apila los cuadrados verticalmente */
+            gap: 20px; /* Espacio entre los cuadrados */
+            align-items: flex-start; /* Alinea los cuadrados a la izquierda */
+            width: 100%; /* Ocupa todo el ancho disponible */
+        }
+
+        /* Media Query para pantallas menores a 600px */
+        @media (max-width: 599px) {
+            header {
+                flex-direction: column;
+                padding: 10px 20px;
+                gap: 10px;
+            }
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-links a {
+                margin: 5px 0;
+            }
+            .nav-links .separator {
+                display: none; /* Oculta el separador en móvil */
+            }
+
+            .main-flex {
+                flex-direction: column; /* Cambia a columna */
+            }
+
+            .contenedor-izquierdo,
+            .contenedor-derecho {
+                width: 100%; /* Ocupan todo el ancho disponible en modo columna */
+                flex-basis: auto; /* Restablece el flex-basis */
+                min-height: 100vh;
+                height: auto; /* Permite que la altura se adapte al contenido */
+                padding: 15px; /* Ajusta el padding en móvil */
+            }
+
+            .cuadrado {
+                width: 60px; /* Cuadrados un poco más pequeños en móvil */
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/1057/1057077.svg" alt="Money Control Logo" style="filter: invert(39%) sepia(87%) saturate(302%) hue-rotate(97deg) brightness(97%) contrast(85%);">
+            Money control
+        </div>
+        <nav class="nav-links">
+            <a href="#">Iniciar Sesion</a>
+            <span class="separator">|</span>
+            <a href="#">Registrarse</a>
+        </nav>
+    </header>
+
+    <div class="contenedor-principal">
+        <main class="main-flex">
+            <div class="contenedor-izquierdo">
+                <div class="cuadrado">cuadrado</div>
+            </div>
+            <div class="contenedor-derecho">
+                <div class="cuadrados-derecha">
+                    <div class="cuadrado">cuadrado</div>
+                    <div class="cuadrado">cuadrado</div>
+                    <div class="cuadrado">cuadrado</div>
+                    <div class="cuadrado">cuadrado</div>
+                    <div class="cuadrado">cuadrado</div>
+                    <div class="cuadrado">cuadrado</div>
+                    <div class="cuadrado">cuadrado</div>
+                    <div class="cuadrado">cuadrado</div>
+                    <div class="cuadrado">cuadrado</div>
+                    <div class="cuadrado">cuadrado</div>
+                    <div class="cuadrado">cuadrado</div>
+                    
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // --- Script JavaScript ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainFlex = document.querySelector('.main-flex');
+
+            const checkWindowSize = () => {
+                if (window.innerWidth < 600) {
+                    mainFlex.style.flexDirection = 'column';
+                } else {
+                    mainFlex.style.flexDirection = 'row';
+                }
+            };
+
+            // Ejecuta la función al cargar la página
+            checkWindowSize();
+
+            // Ejecuta la función cada vez que se redimensiona la ventana
+            window.addEventListener('resize', checkWindowSize);
+        });
+    </script>
+</body>
+</html>
