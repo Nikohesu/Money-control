@@ -1,0 +1,172 @@
+:root{
+    --primary-color:#CEF4A9;
+    --secondary-color:#AFDD91;
+    --secondary-color-hover:#90C678;
+    --prymary-color-hover:#AFD68F;
+    --dark-primary-color:#8FB775;
+    --light-green: #8aea92ff;
+    --mantis: #6bb572ff;
+    --shamrock-green: #5b9a62ff;
+    --fern-green: #4b7f52ff;
+    --cal-poly-green: #265031ff;
+    --dark-green: #8FB775;
+    --dark-green-2: #01200fff;
+    --dark-green-3: #008b09ff;
+    --night: #011502ff;
+  }
+  
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E0FFC3;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .nav{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  
+  .nav-bar{
+    display:flex;
+    height: clamp(50px,10vh,100px);
+    flex-direction: row;
+    background-color: var(--primary-color);
+    justify-content: space-between;
+    align-items: center;
+  }
+  .img-logo{
+    padding:10px;
+    height: clamp(40px,3vw,150px);
+    width: auto;
+  }
+  .icon {
+    width:clamp(30px,5vw,40px);
+    height: auto;
+    box-sizing: border-box;
+    padding: 5px;
+    
+  }
+  .link-p > img {
+    padding-right: 5px;
+    width:clamp(30px,2vw,40px);
+    height: auto;
+  }
+  .link {
+    font-family: SourGummy-SemiBold;
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
+    color:black;
+    
+    
+  }
+  .sep{
+    font-family: SourGummy-SemiBold;
+    font-size: 40px;
+  }
+  .ur-nav{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .link-p{
+    display: flex;
+    flex-direction: row;
+  
+    align-items: center;
+    
+  }
+  
+  /*formulario de registro*/
+  
+  .cuadro{
+    aspect-ratio: 9/11;
+    position:absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    height: 80vh;
+    width: auto;
+    background-color:var(--primary-color);
+    box-shadow: 0px 1px 2px #00000080;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cuadro > h2 {
+    font-family: SourGummy-Light;
+  }
+  .cuadro > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .camp{
+    
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 10px;
+    position: relative;
+  }
+  .logo-form{
+    height: clamp(5px,13vh,100px);
+    width: auto;
+  }
+  
+  .campo {
+    width: clamp(300px, 30vw, 500px);
+    height: clamp(20px, 6vh, 45px);
+    border-radius: 10px;
+    transition: all 1s ease;
+    border: none;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+  }
+  
+  .label{
+    transform: translateY(-30%) scale(0.8);
+    font-size: 100%;
+    font-family: SourGummy-Light;
+    position: absolute;
+    left: 0;
+    padding: 0.7em;
+    margin-left: -0.5em;
+    pointer-events: none;
+    color: rgb(100, 100, 100);
+  }
+  
+  textarea {
+  width: 100%;
+  padding: 15px 30px;
+  display: block;
+  min-width: 300px;
+  max-width: 500px;
+  width: 50vw;
+  height: 20px;
+  border-radius: 6px;
+  }
+  
+  .boton{
+  background-color:white;
+  font-size: 20px;
+  border-radius: 40px;
+  width: 250px;
+  margin:10px auto;
+  font-family:SourGummy-Light ;
+  
+  transition: all;
+  transition-duration: 1s;
+  
+  }

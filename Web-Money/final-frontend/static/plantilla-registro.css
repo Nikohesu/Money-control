@@ -8,11 +8,13 @@
 }
 
 :root{
-    --primary-color:#CEF4A9;
-    --secondary-color:#AFDD91;
+    --primary-color:#DCF3C2;
+    --secondary-color:#87DF5B;
+    --tetraty-color:#A5E062;
     --secondary-color-hover:#90C678;
     --prymary-color-hover:#AFD68F;
     --dark-primary-color:#8FB775;
+
     /*colores posibles*/
     --light-green: #8aea92ff;
     --mantis: #6bb572ff;
@@ -37,6 +39,7 @@ body{
     overflow-y: auto;
     width: 100%;
     height: 100%;
+    background-color: var(--primary-color);
     
 }
 .header {

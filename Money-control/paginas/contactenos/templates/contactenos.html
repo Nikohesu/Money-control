@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactenos</title>
+    <link rel="stylesheet" href="../statics/contactenos.css">
+</head>
+<body>
+    <!--INICIO BARRA DE NAV-->
+        <nav class="nav">
+
+        <div class="nav-bar">
+
+
+            <div class="logo">
+                <a class="link-h" href="#">
+                    <img class="img-logo" src="../assets/png/Money-control.png">
+                </a>
+            </div>
+        <div class="l-links">
+
+            
+            <ul class="ur-nav">
+                <li >
+                    <a class="link link-p" href="#">
+                        Iniciar Sesion
+                    </a>
+                </li>
+                <li class="sep">
+                    |
+                </li>
+                <li>
+                    <a class="link link-p" href="#">
+                        Registrarse
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+        
+        </div>
+    <!--CUADRADO DONDE VA LOS DATOS QUE SE VAN A PEDIR PARA EL CONTACTENOS-->
+    <div class="cuadro">  
+        <div>
+            <img class="logo-form" src="../assets/png/money.png" alt="logo Money-control">
+        </div>
+        <h2>Registrarse</h2>
+
+        <div class="camp">
+                     <input class="campo input" type="text" id="nombre" name="nombre" value="" required>
+                    <label for="nombre" class="label">Nombre:</label>
+                </div>
+        <div class="camp">
+                     <input class="campo input" type="email" id="correo" name="correo" value="" required>
+                    <label for="correo" class="label">Correo:</label>
+                </div>
+
+        <div class="camp">
+                <label for="seleccion" class="label">escoja el dispositivo:</label>
+                <select class="campo select" name="dispositivo" required>
+                    <option value="seleccione">...</option>
+                    <option value="computador">Computador</option>
+                    <option value="celular">Celular</option>
+                </select>
+            </div>
+
+        <div class="camp">
+                <label for="seleccion2" class="label">Tipo de mensaje:</label>
+                <select class="campo select" name="tipo" required>
+                    <option value="seleccione2">...</option>
+                    <option value="queja">Queja</option>
+                    <option value="sugerencia">Sugerencia</option>
+                </select>
+            </div>
+
+        <div class="camp">
+            <label for="esmensaje" class="label"></label>
+            <textarea name="mensaje" placeholder="Escriba su mensaje:" style="height: 100px;"></textarea>
+        </div>
+
+        <div class="div">
+    <button id ="boton" class="boton" onclick="transform_loader()">
+        <p id = "boton-text" class="boton-text">Enviar</p>
+    </button>
+
+</body>
+</html>
